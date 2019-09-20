@@ -100,7 +100,7 @@
 OpenVPN 환경 설정 디렉터리로 복사한다.
 - `./build-key-server server` server라는 이름의 RSA 키 쌍을 생성한다.
 - `./pkitool client` 공개 키 기반 구조에서 사용할 클라이언트 키 집합을 생성한다.
-- `openvpn --tls-client --config /etc/openvpn/client.conf client.conf 파일에 설정된 내용을 이용해 OpenVPN 리눅스 클라이언트를 실행한다.
+- `openvpn --tls-client --config /etc/openvpn/client.conf` client.conf 파일에 설정된 내용을 이용해 OpenVPN 리눅스 클라이언트를 실행한다.
 - `iptables -A FORWARD -i eth1 -o eth2 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT` eth1과 eth2 네트워크 인터페이스 간의 데이터 전송을 허용한다.
 - `man shorewall-rules` Shorewall이 사용하는 rules 파일을 보여준다.
 - `systemctl start shorewall` Shorewall 방화벽 서비스를 실행한다.
@@ -155,9 +155,8 @@ Warning으로 분류된 항목의 개수를 보여준다.
 - `nc -z -v bootstrap-it.com 443 80` 원격 서버에서 443번과 80번 포트를 듣고 있는 서비스 를 검사한다.
 
 ## 15장 주변 장치 문제 해결하기
-- `lshw -c memory(또는 lshw -class memory)` 시스템의 하드웨어 프로파일 중 메모리 항목을
-보여준다.
-- `ls /lib/modules/`uname -r`` /lib/modules/ 디렉터리 아래에 있는 현재 활성화된 커널의 모듈을 모두 나열한다.
+- `lshw -c memory(또는 lshw -class memory)` 시스템의 하드웨어 프로파일 중 메모리 항목을 보여준다.
+- `ls /lib/modules/`uname -r` ` /lib/modules/ 디렉터리 아래에 있는 현재 활성화된 커널의 모듈을 모두 나열한다.
 - `lsmod` 활성화된 모듈을 모두 나열한다.
 - `modprobe -c` 사용할 수 있는 모듈을 모두 나열한다.
 - `find /lib/modules/$(uname -r) -type f -name ath9k*` 사용할 수 있는 커널 모듈 중 이름이 ath9k로 시작하는 파일을 모두 찾는다.
