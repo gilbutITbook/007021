@@ -157,7 +157,7 @@ Warning으로 분류된 항목의 개수를 보여준다.
 ## 15장 주변 장치 문제 해결하기
 - `lshw -c memory(또는 lshw -class memory)` 시스템의 하드웨어 프로파일 중 메모리 항목을
 보여준다.
-- `ls /lib/modules/`uname -r`` /lib/modules/` 디렉터리 아래에 있는 현재 활성화된 커널의 모듈을 모두 나열한다.
+- `ls /lib/modules/`uname -r`` /lib/modules/ 디렉터리 아래에 있는 현재 활성화된 커널의 모듈을 모두 나열한다.
 - `lsmod` 활성화된 모듈을 모두 나열한다.
 - `modprobe -c` 사용할 수 있는 모듈을 모두 나열한다.
 - `find /lib/modules/$(uname -r) -type f -name ath9k*` 사용할 수 있는 커널 모듈 중 이름이 ath9k로 시작하는 파일을 모두 찾는다.
